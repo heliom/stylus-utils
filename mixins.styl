@@ -8,10 +8,10 @@ size(w, h = null)
     width: w; height: w
 
 /**
- * Return given font-size in px and rem if no unit is specified
+ * Return given `font-size` in `px` and `rem` if no unit is specified
  */
 font-size(fs)
-  if unit(fs) is ''
+  if unit(fs) is '' and fs isnt 0
     fsrem = fs / 10
     font-size: fs px
     font-size: fsrem rem
