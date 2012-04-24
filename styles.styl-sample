@@ -44,3 +44,14 @@ h4
   color: #333
   font-size: 16
   margin: 1.3em 0
+
+// Nav -----------------------------------------------------------------------
+nav
+  ul
+    padding: 0
+    font-size: 0
+  li
+    display: inline-block
+    font-size: 16
+  a
+    display: block

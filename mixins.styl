@@ -17,3 +17,12 @@ font-size(fs)
     font-size: fsrem rem
   else
     font-size: fs
+
+/**
+ * Override `display` for adding `inline-block` IE hack
+ */
+display(value)
+  if value is 'inline-block'
+    display: inline-block; *display: inline; zoom: 1
+  else
+    display: value
