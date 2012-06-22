@@ -15,6 +15,8 @@ sub { bottom: -.25em }
 address { font-style: normal }
 
 // Utils ---------------------------------------------------------------------
-.clear:after { content: ''; display: block; clear: both }
-.clear { zoom: 1 }
+.clear
+  zoom: 1
+  &:after { content: ''; display: block; clear: both }
+
 .shy { position: absolute; left: -9999px }
