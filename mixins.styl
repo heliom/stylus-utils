@@ -26,3 +26,12 @@ display(value)
     display: inline-block; *display: inline; zoom: 1
   else
     display: value
+
+/**
+ * Override `overflow` for adding `scroll` iOS support
+ */
+overflow(value)
+  if value is 'scroll'
+    overflow: scroll; -webkit-overflow-scrolling: touch
+  else
+    overflow: value
