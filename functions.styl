@@ -1,0 +1,6 @@
+/**
+ * Return percentage of given target/context ratio for responsive bliss
+ */
+ratio(target, context)
+  value = (target / context * 100)%
+  floor(value * 1000000) / 1000000 // limit decimals to 6
