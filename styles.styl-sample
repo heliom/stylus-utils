@@ -1,4 +1,5 @@
 @import "utils/reset"
+@import "utils/functions"
 @import "utils/mixins"
 
 // Base ----------------------------------------------------------------------
