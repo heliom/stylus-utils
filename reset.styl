@@ -16,8 +16,8 @@ address { font-style: normal }
 
 // Utils ---------------------------------------------------------------------
 .clear
-  zoom: 1
-  &:after { content: ''; display: block; clear: both }
+  *zoom: 1
+  &:before, &:after { content: ''; display: table; clear: both }
 
 .shy { position: absolute; left: -9999px }
 
