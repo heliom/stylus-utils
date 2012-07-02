@@ -20,6 +20,11 @@ img { max-width: 100% }
   *zoom: 1
   &:before, &:after { content: ''; display: table; clear: both }
 
+.newline
+  &:after
+    content: '\A'
+    white-space: pre
+
 .image-replacement
   font: 0/0 a
   color: transparent
