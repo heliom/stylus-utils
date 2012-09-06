@@ -1,37 +1,44 @@
 /**
  * Return `width` and `height` of a given size
  */
-size(w, h = null)
+size(w, h = null, i = null)
+  if h is '!important'
+    i = h
+    h = null
+
   if h
-    width: w; height: h
+    width: w i; height: h i
   else
-    width: w; height: w
+    width: w i; height: w i
 
 /**
  * Return given `font-size` in `px` and `rem` if no unit is specified
  */
-font-size(fs)
+font-size(fs, i = null)
   if unit(fs) is '' and fs isnt 0
     fsrem = fs / 10
-    font-size: fs px
-    font-size: fsrem rem
+    font-size: (fs px) i
+    font-size: (fsrem rem) i
   else
-    font-size: fs
+    font-size: (fs) i
 
 /**
  * Override `display` for adding `inline-block` IE hack
  */
-display(value)
+display(value, i = null)
   if value is 'inline-block'
-    display: inline-block; *display: inline; *zoom: 1
+    display: inline-block i
+    *display: inline i
+    *zoom: 1 i
   else
-    display: value
+    display: value i
 
 /**
  * Override `overflow` for adding `scroll` iOS support
  */
-overflow(value)
+overflow(value, i = null)
   if value is 'scroll'
-    overflow: scroll; -webkit-overflow-scrolling: touch
+    overflow: scroll i
+    -webkit-overflow-scrolling: touch i
   else
-    overflow: value
+    overflow: value i
