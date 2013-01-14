@@ -15,10 +15,13 @@ size(w, h = null, i = null)
  * Return given `font-size` in `px` and `rem` if no unit is specified
  */
 font-size(fs, i = null)
-  if unit(fs) is '' and fs isnt 0
-    fsrem = fs / 10
-    font-size: (fs px) i
-    font-size: (fsrem rem) i
+  if typeof(fs) is 'unit'
+    if unit(fs) is '' and fs isnt 0
+      fsrem = fs / 10
+      font-size: (fs px) i
+      font-size: (fsrem rem) i
+    else
+      font-size: (fs) i
   else
     font-size: (fs) i
 
