@@ -45,3 +45,9 @@ overflow(value, i = null)
     -webkit-overflow-scrolling: touch i
   else
     overflow: value i
+
+/**
+ * Override `opacity` to prevent Nib from outputting `filter`
+ */
+opacity(value)
+  opacity: value
